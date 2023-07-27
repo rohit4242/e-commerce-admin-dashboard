@@ -72,9 +72,10 @@ const MobileNav: FC = () => {
         </MenubarTrigger>
         <MenubarContent className="mr-2">
           {routes.map((route) => (
-            <MenubarItem>
+            <MenubarItem key={route.href}>
+              {" "}
+              {/* Add key prop here */}
               <Link
-                key={route.href}
                 href={route.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
