@@ -29,38 +29,38 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({
       <div className="flex-1 p-8 pt-6 space-y-4">
         <Heading title="Dashboard" description="Overview of your store" />
         <Separator />
-        <div className="grid grid-cols-3 gap-4">
-          <Card>
+        <div className="grid grid-cols-3 gap-4 ">
+          <Card className="bg-teal-500/5">
             <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
               <CardTitle className="text-sm font-medium">
                 Total Revenue
               </CardTitle>
-              <DollarSign className="w-4 h-4 text-muted-foreground" />
+              <DollarSign className="w-4 h-4 text-muted-foreground text-teal-500" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{formatter.format(totalRevenue)}</div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-teal-500/5">
             <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
               <CardTitle className="text-sm font-medium">Sales</CardTitle>
-              <CreditCard className="w-4 h-4 text-muted-foreground" />
+              <CreditCard className="w-4 h-4 text-muted-foreground text-teal-500" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">+{salesCount}</div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-teal-500/5">
             <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
               <CardTitle className="text-sm font-medium">Products In Stock</CardTitle>
-              <Package className="w-4 h-4 text-muted-foreground" />
+              <Package className="w-4 h-4 text-muted-foreground text-teal-500" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stockCount}</div>
             </CardContent>
           </Card>
         </div>
-        <Card className="col-span-4">
+        <Card className="col-span-4  bg-teal-500/5">
           <CardHeader>
             <CardTitle>Overview</CardTitle>
           </CardHeader>

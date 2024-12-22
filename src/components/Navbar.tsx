@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { UserButton, auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 import StoreSwitcher from "@/components/StoreSwitcher";
@@ -10,7 +10,7 @@ import db from "@/lib/db";
 import MobileNav from "./MobileNav";
 
 const Navbar: FC = async () => {
-  const { userId } = auth();
+  const { userId } = await auth();
 
   if (!userId) {
     redirect("/sign-in");
@@ -31,7 +31,7 @@ const Navbar: FC = async () => {
           <MobileNav />
 
           <ThemeToggle />
-          <UserButton afterSignOutUrl="/" />
+          {/* <UserButton afterSignOutUrl="/" /> */}
         </div>
       </div>
     </div>
